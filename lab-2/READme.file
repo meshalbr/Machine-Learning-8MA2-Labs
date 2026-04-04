@@ -1,0 +1,19 @@
+# Australia Weather Data - Quality Assessment & Preprocessing
+
+## Dataset Description
+This repository utilizes the massive "Rain in Australia" dataset directly from Kaggle, containing over 145,000 daily weather observations from numerous Australian weather stations.
+
+Due to the massive size of the dataset, the Jupyter Notebook is configured to use the `kagglehub` library to fetch the data directly from the cloud at runtime. A lightweight `Sample_Weather_Data.csv` is included in this repository to satisfy the submission requirements and provide a preview of the raw data structure.
+
+**Key Columns Analyzed:**
+* **Date**: Date of the observation (String/Date).
+* **MinTemp / MaxTemp**: Minimum and maximum temperatures in degrees Celsius (Numeric).
+* **Rainfall**: The amount of rainfall recorded for the day in millimeters (Numeric).
+* **Humidity9am / Humidity3pm**: Humidity percentages at specific times of the day (Numeric).
+
+## Assignment Objectives
+1. **Task 1 - Data Quality**: Converting date strings into proper datetime objects for time-series compatibility.
+2. **Task 2 - Missing Values**: Applying Median Imputation across numerical columns to handle widespread missing data without dropping tens of thousands of rows.
+3. **Task 3 - Outliers**: Utilizing the IQR method to detect and cap extreme weather anomalies (e.g., flash flood rainfall levels).
+4. **Task 4 - Normalization**: Standardizing features using Min-Max and Z-score scaling.
+5. **Task 5 - PCA**: Reducing the dimensionality of the standardized weather features and interpreting the explained variance ratio.
